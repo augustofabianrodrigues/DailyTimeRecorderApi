@@ -217,5 +217,4 @@ FakesAssemblies/
 _Pvt_Extensions
 
 # Bundled files
-wwwroot/*
-bundle*.js
+wwwroot/
