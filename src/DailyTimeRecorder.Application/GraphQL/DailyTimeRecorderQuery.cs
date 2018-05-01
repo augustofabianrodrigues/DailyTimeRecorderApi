@@ -9,7 +9,22 @@ namespace DailyTimeRecorder.Application.GraphQL
         {
             Field<AnalystType>(
                 "analyst",
-                resolve: context => analystRepository.Get(1)
+                arguments: new QueryArguments(
+                    new QueryArgument<NonNullGraphType<IntGraphType>> { Name = "id" }
+                ),
+                resolve: context =>
+                    analystRepository.GetAsync(context.GetArgument<long>("id"))
+            );
+
+            Field<ListGraphType<AnalystType>>(
+                "analysts",
+                arguments: new QueryArguments(
+                    new QueryArgument<StringGraphType> { Name = "name" },
+                    new QueryArgument<StringGraphType> { Name = "email" }
+                ),
+                resolve: context =>
+                    analystRepository.GetOptionallyByNameAndEmail(
+                        context.GetArgument<string>("name"), context.GetArgument<string>("email"))
             );
         }
     }

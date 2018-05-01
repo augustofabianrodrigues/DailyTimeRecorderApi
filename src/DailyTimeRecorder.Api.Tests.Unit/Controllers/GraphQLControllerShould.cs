@@ -37,7 +37,7 @@ namespace DailyTimeRecorder.Api.Tests.Unit.Controllers
         public async void ReturnNotNullExecutionResult()
         {
             // Given
-            var query = new GraphQLQuery { Query = @"{ ""query"": ""query { analyst { id name } }""" };
+            var query = new GraphQLQuery { Query = @"{ ""query"": ""query { analysts { id name } }""" };
 
             // When
             var result = await _graphqlController.Post(query);

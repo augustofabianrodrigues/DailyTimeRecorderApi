@@ -10,9 +10,10 @@ namespace DailyTimeRecorder.Infra.CrossCutting.IoC.Application
         internal static void Configure(IServiceCollection services)
         {
             services.AddTransient<DailyTimeRecorderQuery>();
+            services.AddTransient<DailyTimeRecorderMutation>();
+
             services.AddTransient<IDocumentExecuter, DocumentExecuter>();
-            services.AddTransient<ISchema>(
-                provider => new Schema { Query = provider.GetService<DailyTimeRecorderQuery>() });
+            services.AddTransient<ISchema, DailyTimeRecorderSchema>();
         }
     }
 }
