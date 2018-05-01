@@ -4,7 +4,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [Analysts](
     [Id] [bigint] IDENTITY(1,1) NOT NULL,
-    [Email] [nvarchar](250) NOT NULL,
+    [Email] [nvarchar](254) NOT NULL,
     [Name] [nvarchar](50) NOT NULL,
  CONSTRAINT [PK_Analysts] PRIMARY KEY CLUSTERED 
 (
