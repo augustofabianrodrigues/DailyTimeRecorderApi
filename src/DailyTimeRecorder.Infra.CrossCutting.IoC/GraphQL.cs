@@ -3,7 +3,7 @@ using GraphQL;
 using GraphQL.Types;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DailyTimeRecorder.Infra.CrossCutting.IoC.Application
+namespace DailyTimeRecorder.Infra.CrossCutting.IoC
 {
     internal static class GraphQL
     {

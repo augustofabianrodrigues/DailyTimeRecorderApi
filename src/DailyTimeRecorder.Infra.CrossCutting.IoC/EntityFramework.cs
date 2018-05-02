@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DailyTimeRecorder.Infra.CrossCutting.IoC.Data
+namespace DailyTimeRecorder.Infra.CrossCutting.IoC
 {
     internal static class EntityFramework
     {

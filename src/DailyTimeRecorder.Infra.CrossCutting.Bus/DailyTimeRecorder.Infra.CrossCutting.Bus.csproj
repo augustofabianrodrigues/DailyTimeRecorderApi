@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="7.5.2" />
     <PackageReference Include="MediatR" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DailyTimeRecorder.Domain.Core\DailyTimeRecorder.Domain.Core.csproj" />
   </ItemGroup>
 
 </Project>
