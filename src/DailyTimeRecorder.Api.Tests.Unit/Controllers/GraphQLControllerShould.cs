@@ -1,7 +1,7 @@
 ﻿using DailyTimeRecorder.Api.Controllers;
 using DailyTimeRecorder.Application.GraphQL;
+using DailyTimeRecorder.Application.GraphQL.Interfaces;
 using GraphQL;
-using GraphQL.Types;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System.Threading.Tasks;
@@ -18,8 +18,10 @@ namespace DailyTimeRecorder.Api.Tests.Unit.Controllers
             // Given
             var documentExecutor = new Mock<IDocumentExecuter>();
             documentExecutor.Setup(x => x.ExecuteAsync(It.IsAny<ExecutionOptions>())).Returns(Task.FromResult(new ExecutionResult()));
-            var schema = new Mock<ISchema>();
-            _graphqlController = new GraphQLController(documentExecutor.Object, schema.Object);
+            var schema = new Mock<IDailyTimeRecorderSchema>();
+            _graphqlController = new GraphQLController(
+                new GraphQLQueryExecuter(documentExecutor.Object, schema.Object)
+            );
         }
 
         [Fact]

@@ -35,7 +35,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Tests", "6 - Tests", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DailyTimeRecorder.Api.Tests.Unit", "src\DailyTimeRecorder.Api.Tests.Unit\DailyTimeRecorder.Api.Tests.Unit.csproj", "{BD187C93-4E4C-42C6-85E7-5C6564C6A427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyTimeRecorder.Infra.CrossCutting.Bus", "src\DailyTimeRecorder.Infra.CrossCutting.Bus\DailyTimeRecorder.Infra.CrossCutting.Bus.csproj", "{0989EB44-6E5C-4F31-BAD9-FFEF3E2666FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DailyTimeRecorder.Infra.CrossCutting.Bus", "src\DailyTimeRecorder.Infra.CrossCutting.Bus\DailyTimeRecorder.Infra.CrossCutting.Bus.csproj", "{0989EB44-6E5C-4F31-BAD9-FFEF3E2666FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyTimeRecorder.Application.GraphQL", "src\DailyTimeRecorder.Application.GraphQL\DailyTimeRecorder.Application.GraphQL.csproj", "{92F54363-465E-4AA6-9C6B-D45E68978408}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{0989EB44-6E5C-4F31-BAD9-FFEF3E2666FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0989EB44-6E5C-4F31-BAD9-FFEF3E2666FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0989EB44-6E5C-4F31-BAD9-FFEF3E2666FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F54363-465E-4AA6-9C6B-D45E68978408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F54363-465E-4AA6-9C6B-D45E68978408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F54363-465E-4AA6-9C6B-D45E68978408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F54363-465E-4AA6-9C6B-D45E68978408}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +102,7 @@ Global
 		{84C913E3-8AFA-41F6-819F-E9058042F0A4} = {17F46BC9-88C4-41DD-AAA2-786D4D9BCE03}
 		{BD187C93-4E4C-42C6-85E7-5C6564C6A427} = {84C913E3-8AFA-41F6-819F-E9058042F0A4}
 		{0989EB44-6E5C-4F31-BAD9-FFEF3E2666FC} = {89BF257D-B422-4080-957D-D21D92DF460A}
+		{92F54363-465E-4AA6-9C6B-D45E68978408} = {BE305A84-6775-494C-94EC-8813691D0127}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B93BFE00-A189-4B08-918C-5ED85BF23059}

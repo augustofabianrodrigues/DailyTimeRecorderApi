@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL" Version="2.0.0-alpha-887" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
@@ -20,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DailyTimeRecorder.Domain\DailyTimeRecorder.Domain.csproj" />
+    <ProjectReference Include="..\DailyTimeRecorder.Application.GraphQL\DailyTimeRecorder.Application.GraphQL.csproj" />
     <ProjectReference Include="..\DailyTimeRecorder.Infra.CrossCutting.IoC\DailyTimeRecorder.Infra.CrossCutting.IoC.csproj" />
   </ItemGroup>
 

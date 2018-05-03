@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DailyTimeRecorder.Application.GraphQL\DailyTimeRecorder.Application.GraphQL.csproj" />
     <ProjectReference Include="..\DailyTimeRecorder.Application\DailyTimeRecorder.Application.csproj" />
     <ProjectReference Include="..\DailyTimeRecorder.Infra.Data\DailyTimeRecorder.Infra.Data.csproj" />
   </ItemGroup>

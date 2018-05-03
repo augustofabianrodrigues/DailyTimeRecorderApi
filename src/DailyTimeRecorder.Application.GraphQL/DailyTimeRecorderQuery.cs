@@ -1,9 +1,11 @@
-﻿using DailyTimeRecorder.Domain.Interfaces;
+﻿using DailyTimeRecorder.Application.GraphQL.Interfaces;
+using DailyTimeRecorder.Application.GraphQL.Types;
+using DailyTimeRecorder.Domain.Interfaces;
 using GraphQL.Types;
 
 namespace DailyTimeRecorder.Application.GraphQL
 {
-    public sealed class DailyTimeRecorderQuery : ObjectGraphType
+    public sealed class DailyTimeRecorderQuery : ObjectGraphType, IDailyTimeRecorderQuery
     {
         public DailyTimeRecorderQuery(IAnalystRepository analystRepository)
         {

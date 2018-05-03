@@ -1,7 +1,7 @@
 ﻿using DailyTimeRecorder.Domain.Models;
 using GraphQL.Types;
 
-namespace DailyTimeRecorder.Application.GraphQL
+namespace DailyTimeRecorder.Application.GraphQL.Types
 {
     public sealed class AnalystType : ObjectGraphType<Analyst>
     {

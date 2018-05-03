@@ -1,6 +1,5 @@
 ﻿using DailyTimeRecorder.Application.GraphQL;
-using GraphQL;
-using GraphQL.Types;
+using DailyTimeRecorder.Application.GraphQL.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -9,14 +8,11 @@ namespace DailyTimeRecorder.Api.Controllers
     [Route("graphql")]
     public class GraphQLController : Controller
     {
-        private readonly IDocumentExecuter _documentExecuter;
-        private readonly ISchema _schema;
+        private readonly IGraphQLQueryExecuter _graphQLQueryExecuter;
 
-        public GraphQLController(
-            IDocumentExecuter documentExecuter, ISchema schema)
+        public GraphQLController(IGraphQLQueryExecuter graphQLQueryExecuter)
         {
-            _documentExecuter = documentExecuter;
-            _schema = schema;
+            _graphQLQueryExecuter = graphQLQueryExecuter;
         }
 
         [HttpGet]
@@ -28,13 +24,10 @@ namespace DailyTimeRecorder.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] GraphQLQuery query)
         {
-            var executionOptions = new ExecutionOptions { Schema = _schema, Query = query.Query };
-            var result = await _documentExecuter.ExecuteAsync(executionOptions).ConfigureAwait(false);
+            var result = await _graphQLQueryExecuter.ExecuteAsync(query);
 
             if (result.Errors?.Count > 0)
-            {
                 return BadRequest(result.Errors);
-            }
 
             return Ok(result);
         }
